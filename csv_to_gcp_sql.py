@@ -22,7 +22,7 @@ with DAG(
     default_args=default_args,
     schedule_interval = "0 1 * * *",
     ) as dag:
-sqlLoad = PythonOperator(
+    sqlLoad = PythonOperator(
         task_id="sql_load",
         python_callable=sqlLoad,
         op_kwargs={'param_dic': param_dic},
