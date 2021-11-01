@@ -1,7 +1,10 @@
 import airflow.utils.dates
-
+import os
 # The DAG object; we'll need this to instantiate a DAG
 from airflow import DAG
+
+import sys
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 
 # Operators; we need this to operate!
 from custom_modules.dag_s3_to_postgres_user_purchase import S3ToPostgresTransfer
