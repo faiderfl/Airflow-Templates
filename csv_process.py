@@ -9,9 +9,6 @@ import csv
 import sqlalchemy
 from sqlalchemy import create_engine
 
-import logging
-import os
-import cloudstorage as gcs
 
 #from google.appengine.api import app_identity
 
